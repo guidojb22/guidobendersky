@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bricolage Grotesque', sans-serif;
+  }
+
+/* CSS HEX 
+--jordy-blue: #adc7ffff;
+--glaucous: #6279b8ff;
+--space-cadet: #253056ff;
+--hookers-green: #496f5dff;
+--shamrock-green: #4c9f70ff;
+*/
+
+*::selection {
+    background-color: #adc7ffff;
+    color: #6279b8ff;
+  }
+
+.grillaprincipal {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "presentation presentation presentation presentation"
+  "experiencia estudios sitios contacto";
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+      "foto nombre nombre codigo"
+      "foto resumen resumen codigo";
+  place-items: center;
+  grid-area: presentation;
+  padding: 30px;
+  background-color: #253056ff;
+  animation-delay: 0.1s;
+}
+
+@-webkit-keyframes puff-in-center{0%{-webkit-transform:scale(2);transform:scale(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes puff-in-center{0%{-webkit-transform:scale(2);transform:scale(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+
+.puff-in-center{-webkit-animation:puff-in-center .7s cubic-bezier(.47,0.000,.745,.715) both;animation:puff-in-center .7s cubic-bezier(.47,0.000,.745,.715) both}
+
+.nombre {
+  grid-area: nombre;
+  color: #adc7ffff;
+  font-size: 52px;
+  transition: all 0.3s;
+  animation-delay: 1.2s;
+}
+
+.nombre:hover {
+  font-size: 54px;
+}
+
+.resumen {
+  grid-area: resumen;
+  color: #adc7ffff;
+  padding-right: 100px;
+  padding-left: 100px;
+  font-size: 17.5px;
+  transition: all 0.3s;
+  animation-delay: 1.2s;
+}
+
+.resumen:hover {
+  color: #c9daff;
+}
+
+.fotoprincipal {
+  grid-area: foto;
+  max-width: 200px;
+  border-radius: 10px;
+  border: groove;
+  border-color: #adc7ffff;
+  transition: all 0.3s;
+  animation-delay: 0.6s;
+}
+
+.fotoprincipal:hover {
+  max-width: 206px;
+}
+
+.codigo {
+  grid-area: codigo;
+  width: 100px;
+  transition: all 0.3s;
+  animation-delay: 0.6s;
+}
+
+.codigo:hover {
+  width: 140px;
+}
+
+.experiencia {
+  grid-area: experiencia;
+  background-color: #adc7ffff;
+  border: groove;
+  border-color: #253056ff;
+  transition: all 0.3s;
+  animation-delay: 1.8s;
+  display: grid;
+  padding: 10px;
+}
+
+.experiencia:hover {
+  background-color: #adc7ffff;
+  border: 10px groove;
+  border-color: #253056ff;
+
+}
+
+.estudios {
+  grid-area: estudios;
+  background-color: #6279b8ff;
+  border: groove;
+  border-color: #253056ff;
+  transition: all 0.3s;  
+  animation-delay: 2.1s;
+  display: grid;
+  padding: 10px;
+}
+
+.estudios:hover {
+  background-color: #6279b8ff;
+  border: 10px groove;
+  border-color: #253056ff;
+}
+
+.sitios {
+  grid-area: sitios;
+  background-color: #adc7ffff;
+  border: groove;
+  border-color: #253056ff;
+  transition: all 0.3s;
+  animation-delay: 2.4s;
+  display: grid;
+  padding: 10px;
+}
+
+.sitios:hover {
+  background-color: #adc7ffff;
+  border: 10px groove;
+  border-color: #253056ff;
+}
+
+.contacto {
+  grid-area: contacto;
+  background-color: #6279b8ff;
+  border: groove;
+  border-color: #253056ff;
+  transition: all 0.3s;
+  animation-delay: 2.7s;
+  display: grid;
+  padding: 10px;
+}
+
+.contacto:hover {
+  background-color: #6279b8ff;
+  border: 10px groove;
+  border-color: #253056ff;
+}
+
+@media screen and (max-width: 600px) {
+
+  .grillaprincipal {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr) ;
+      grid-template-areas: 
+          "presentation"
+          "experiencia"
+          "estudios"
+          "sitios"
+          "contacto"
+  }
+
+  .presentation {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "foto"
+        "nombre"
+        "resumen"
+        "codigo" ;
+    place-items: center;
+  }
+}
