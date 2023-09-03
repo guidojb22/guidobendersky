@@ -7,6 +7,11 @@
     font-family: 'Bricolage Grotesque', sans-serif;
   }
 
+*::selection {
+  color: #6279b8ff;
+  background-color: #253056ff;
+}
+
 /* CSS HEX 
 --jordy-blue: #adc7ffff;
 --glaucous: #6279b8ff;
@@ -14,11 +19,6 @@
 --hookers-green: #496f5dff;
 --shamrock-green: #4c9f70ff;
 */
-
-*::selection {
-    background-color: #adc7ffff;
-    color: #6279b8ff;
-  }
 
 .grillaprincipal {
   height: 100vh;
@@ -60,6 +60,11 @@
   font-size: 54px;
 }
 
+.nombre::selection {
+  background-color: #adc7ffff;
+  color: #253056ff;
+  }
+
 .resumen {
   grid-area: resumen;
   color: #adc7ffff;
@@ -73,6 +78,11 @@
 .resumen:hover {
   color: #c9daff;
 }
+
+.resumen::selection {
+  background-color: #adc7ffff;
+  color: #253056ff;
+  }
 
 .fotoprincipal {
   grid-area: foto;
@@ -102,6 +112,7 @@
 .experiencia {
   grid-area: experiencia;
   background-color: #adc7ffff;
+  color: #253056ff;
   border: groove;
   border-color: #253056ff;
   transition: all 0.3s;
@@ -121,6 +132,7 @@
 .estudios {
   grid-area: estudios;
   background-color: #6279b8ff;
+  color: black;
   border: groove;
   border-color: #253056ff;
   transition: all 0.3s;  
@@ -139,6 +151,7 @@
 .sitios {
   grid-area: sitios;
   background-color: #adc7ffff;
+  color: #253056ff;
   border: groove;
   border-color: #253056ff;
   transition: all 0.3s;
@@ -154,9 +167,15 @@
   border-color: #253056ff;
 }
 
+.web {
+  width: 36px;
+  height: 36px;
+}
+
 .contacto {
   grid-area: contacto;
   background-color: #6279b8ff;
+  color: black;
   border: groove;
   border-color: #253056ff;
   transition: all 0.3s;
@@ -170,6 +189,19 @@
   background-color: #6279b8ff;
   border: 10px groove;
   border-color: #253056ff;
+}
+
+.links {
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.links:hover {
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1100px) {
@@ -187,30 +219,33 @@
 
   .presentation {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 0.4fr 1fr 1fr;
     grid-template-areas:
         "foto codigo"
         "nombre nombre"
+        "resumen resumen"
         "resumen resumen";
     place-items: center;
     padding: 5px;
-    height: 70vh;
+    height: 100vh;
   }
 
   .fotoprincipal {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   .nombre {
     padding-bottom: 0px;
-    padding-top: 0px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 45px;
   }
   .resumen {
     padding-bottom: 0px;
     padding-top: 0px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
   }
 }
