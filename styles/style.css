@@ -108,6 +108,7 @@
   animation-delay: 1.8s;
   display: grid;
   padding: 10px;
+  height: 50vh;
 }
 
 .experiencia:hover {
@@ -126,6 +127,7 @@
   animation-delay: 2.1s;
   display: grid;
   padding: 10px;
+  height: 50vh;
 }
 
 .estudios:hover {
@@ -143,6 +145,7 @@
   animation-delay: 2.4s;
   display: grid;
   padding: 10px;
+  height: 50vh;
 }
 
 .sitios:hover {
@@ -160,6 +163,7 @@
   animation-delay: 2.7s;
   display: grid;
   padding: 10px;
+  height: 50vh;
 }
 
 .contacto:hover {
@@ -168,7 +172,7 @@
   border-color: #253056ff;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
 
   .grillaprincipal {
       grid-template-columns: 1fr;
@@ -182,13 +186,31 @@
   }
 
   .presentation {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-        "foto"
-        "nombre"
-        "resumen"
-        "codigo" ;
+        "foto codigo"
+        "nombre nombre"
+        "resumen resumen";
     place-items: center;
+    padding: 5px;
+    height: 70vh;
+  }
+
+  .fotoprincipal {
+    margin-top: 10px;
+  }
+
+  .nombre {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .resumen {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
